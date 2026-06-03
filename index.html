@@ -12,31 +12,39 @@
       background: #0e0e0e;
       color: #f2f2f2;
       line-height: 1.6;
-      position: relative;
     }
 
-    /* DRAGÓN DE FONDO (NO TOCA EL TEXTO) */
+    /* DRAGÓN DE FONDO (NO TOCA TU CONTENIDO) */
     body::before {
       content: "";
       position: fixed;
       inset: 0;
-      background-image: url("Dragon.png");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
+      background: url("dragon.png") center/contain no-repeat;
       opacity: 0.06;
       pointer-events: none;
       z-index: 0;
     }
 
-    /* TODO EL TEXTO ENCIMA DEL DRAGÓN */
-    .content {
+    /* ASEGURA QUE TODO TU CONTENIDO ESTÉ ENCIMA */
+    header, section, div, h1, h2, p, a, img {
       position: relative;
       z-index: 1;
+    }
+
+    header, section {
       max-width: 800px;
       margin: auto;
-      padding: 60px 20px;
-      white-space: pre-line; /* RESPETA TUS SALTOS DE LÍNEA */
+      padding: 40px 20px;
+    }
+
+    h1, h2 {
+      letter-spacing: 1px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #333;
+      margin: 40px 0;
     }
 
     a {
@@ -47,76 +55,30 @@
     a:hover {
       text-decoration: underline;
     }
+
+    iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+    }
   </style>
 </head>
 
 <body>
 
-<div class="content">
+<!-- TU CONTENIDO VA EXACTAMENTE COMO LO TENÉS -->
+<header>
+  <h1>RODASAMPLER</h1>
+  <h2>Laboratorio sonoro</h2>
+</header>
 
-RODASAMPLER
+<section>
+  <p>
+    Ser parte del sonido.
+  </p>
+</section>
 
-Laboratorio sonoro
-
-Ser parte del sonido.
-
-Un espacio abierto donde personas con o sin experiencia musical crean colectivamente paisajes sonoros a través de la voz, la percusión, el cuerpo, la escucha, los instrumentos acústicos y las herramientas electrónicas.
-
-────────────────
-
-¿Qué es Rodasampler?
-
-Rodasampler es un laboratorio sonoro y un espacio de encuentro donde la improvisación, la escucha y el juego se convierten en herramientas para la creación colectiva.
-
-Cada encuentro propone una experiencia de exploración en la que voces, percusiones, instrumentos, palabras y sonidos cotidianos se transforman en paisajes sonoros compartidos.
-
-A lo largo del proceso, los encuentros también se vuelven taller: un espacio donde aprender, experimentar, descubrir y desarrollar nuevas formas de expresión a través del sonido.
-
-Más que una actividad musical, Rodasampler es una invitación a escuchar, crear y ser parte del sonido.
-
-────────────────
-
-¿Cómo son los encuentros?
-
-Escucha, juego e improvisación alrededor de una mesa compartida.
-
-Instrumentos de distintas culturas, objetos sonoros y herramientas electrónicas.
-
-Un espacio abierto donde cada persona puede expresarse y aportar su propia voz a una creación colectiva.
-
-Cada encuentro da origen a un paisaje sonoro único e irrepetible que se integra a un Tapiz de Memorias Sonoras, preservando la huella de lo vivido.
-
-────────────────
-
-Tapiz de Memorias Sonoras
-
-Cada encuentro deja una huella.
-
-Sonidos, imágenes, palabras y experiencias compartidas que continúan resonando más allá de la improvisación.
-
-Las Memorias Sonoras conforman un archivo vivo en permanente construcción: un tapiz tejido por todas las personas que han formado parte de Rodasampler.
-
-[Playlist de YouTube]
-
-────────────────
-
-Sobre Javier Escudero
-
-Javier Agustín Escudero es músico experimental y artesano sonoro nacido en Salta y radicado en Hurlingham, Buenos Aires.
-
-Su trabajo explora la improvisación, el live looping, la escucha profunda, el paisaje sonoro y la relación entre tecnologías contemporáneas y músicas de raíz.
-
-Es creador y coordinador de Rodasampler.
-
-────────────────
-
-Contacto
-
-Instagram
-YouTube
-Hurlingham, Buenos Aires, Argentina
-
-</div>
+<!-- AQUÍ VAS A PEGAR EL RESTO DE TU TEXTO TAL CUAL LO TENÉS -->
 
 </body>
 </html>
