@@ -13,27 +13,24 @@
       color: #f2f2f2;
       line-height: 1.6;
       position: relative;
-      overflow-x: hidden;
+      min-height: 100vh;
     }
 
-    /* DRAGÓN DE FONDO */
+    /* FONDO DRAGÓN */
     body::before {
       content: "";
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      inset: 0;
       background-image: url("Dragon.png");
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
-      opacity: 0.06; /* podés subir o bajar esto */
+      opacity: 0.06;
       pointer-events: none;
       z-index: 0;
     }
 
-    /* CONTENIDO ENCIMA DEL FONDO */
+    /* CONTENIDO ENCIMA */
     header, section {
       position: relative;
       z-index: 1;
@@ -44,6 +41,7 @@
 
     h1, h2 {
       letter-spacing: 1px;
+      margin: 0;
     }
 
     hr {
@@ -75,6 +73,12 @@
     <h1>RODASAMPLER</h1>
     <h2>Laboratorio sonoro</h2>
   </header>
+
+  <section>
+    <p>
+      Bienvenido al laboratorio sonoro. Aquí exploro texturas, improvisación y síntesis.
+    </p>
+  </section>
 
 </body>
 </html>
