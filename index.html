@@ -14,6 +14,20 @@
       line-height: 1.6;
     }
 
+    /* Fondo dragón sutil */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("dragon.png") center/cover no-repeat;
+      opacity: 0.05;
+      pointer-events: none;
+      z-index: -1;
+    }
+
     header, section {
       max-width: 800px;
       margin: auto;
@@ -39,13 +53,23 @@
       text-decoration: underline;
     }
 
-    /* HERO IMAGE CONTROLADA (CLAVE) */
+    /* IMAGEN GRANDE */
     .hero {
       width: 100%;
       max-width: 600px;
       margin: 20px auto;
       display: block;
       border-radius: 8px;
+    }
+
+    /* FOTO BIOGRAFÍA */
+    .profile {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+      margin-bottom: 20px;
     }
 
     iframe {
@@ -70,7 +94,6 @@
       la escucha, los instrumentos acústicos y las herramientas electrónicas.
     </p>
 
-    <!-- IMAGEN HERO CONTROLADA -->
     <img src="hero.jpg" alt="Rodasampler" class="hero">
   </header>
 
@@ -98,6 +121,9 @@
     <p>
       Más que una actividad musical, Rodasampler es una invitación a escuchar, crear y ser parte del sonido.
     </p>
+
+    <!-- SEGUNDA IMAGEN -->
+    <img src="imagen2.jpg" alt="Rodasampler sesión" class="hero">
   </section>
 
   <hr>
@@ -106,21 +132,10 @@
   <section>
     <h2>¿Cómo son los encuentros?</h2>
 
-    <p>
-      Escucha, juego e improvisación alrededor de una mesa compartida.
-    </p>
-
-    <p>
-      Instrumentos de distintas culturas, objetos sonoros y herramientas electrónicas.
-    </p>
-
-    <p>
-      Un espacio abierto donde cada persona puede expresarse y aportar su propia voz a una creación colectiva.
-    </p>
-
-    <p>
-      Cada encuentro da origen a un paisaje sonoro único e irrepetible que se integra a un Tapiz de Memorias Sonoras.
-    </p>
+    <p>Escucha, juego e improvisación alrededor de una mesa compartida.</p>
+    <p>Instrumentos de distintas culturas, objetos sonoros y herramientas electrónicas.</p>
+    <p>Un espacio abierto donde cada persona puede expresarse y aportar su propia voz a una creación colectiva.</p>
+    <p>Cada encuentro da origen a un paisaje sonoro único e irrepetible.</p>
   </section>
 
   <hr>
@@ -129,17 +144,9 @@
   <section>
     <h2>Tapiz de Memorias Sonoras</h2>
 
-    <p>
-      Cada encuentro deja una huella.
-    </p>
-
-    <p>
-      Sonidos, imágenes, palabras y experiencias compartidas que continúan resonando más allá de la improvisación.
-    </p>
-
-    <p>
-      Las Memorias Sonoras conforman un archivo vivo en permanente construcción.
-    </p>
+    <p>Cada encuentro deja una huella.</p>
+    <p>Sonidos, imágenes, palabras y experiencias compartidas que continúan resonando.</p>
+    <p>Las Memorias Sonoras conforman un archivo vivo en permanente construcción.</p>
 
     <iframe
       src="https://www.youtube.com/embed/videoseries?list=PLIcssXW2VeKnyfGQJpoLSjxrsg0Om5piZ"
@@ -152,6 +159,9 @@
   <!-- SOBRE VOS -->
   <section>
     <h2>Sobre Javier Escudero</h2>
+
+    <!-- FOTO CUADRADA -->
+    <img src="javier.jpg" alt="Javier Escudero" class="profile">
 
     <p>
       Javier Agustín Escudero es músico experimental y artesano sonoro nacido en Salta y radicado en Hurlingham, Buenos Aires.
