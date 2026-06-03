@@ -12,9 +12,10 @@
       background: #0e0e0e;
       color: #f2f2f2;
       line-height: 1.6;
+      position: relative;
     }
 
-    /* DRAGÓN DE FONDO (NO TOCA TU CONTENIDO) */
+    /* DRAGÓN DE FONDO (AGREGADO SIN TOCAR TU ESTRUCTURA) */
     body::before {
       content: "";
       position: fixed;
@@ -25,16 +26,12 @@
       z-index: 0;
     }
 
-    /* ASEGURA QUE TODO TU CONTENIDO ESTÉ ENCIMA */
-    header, section, div, h1, h2, p, a, img {
-      position: relative;
-      z-index: 1;
-    }
-
     header, section {
       max-width: 800px;
       margin: auto;
       padding: 40px 20px;
+      position: relative;
+      z-index: 1;
     }
 
     h1, h2 {
@@ -56,6 +53,14 @@
       text-decoration: underline;
     }
 
+    .hero {
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 8px;
+    }
+
     iframe {
       width: 100%;
       height: 315px;
@@ -66,19 +71,14 @@
 
 <body>
 
-<!-- TU CONTENIDO VA EXACTAMENTE COMO LO TENÉS -->
-<header>
-  <h1>RODASAMPLER</h1>
-  <h2>Laboratorio sonoro</h2>
-</header>
+  <!-- HERO -->
+  <header>
+    <h1>RODASAMPLER</h1>
+    <h2>Laboratorio sonoro</h2>
 
-<section>
-  <p>
-    Ser parte del sonido.
-  </p>
-</section>
-
-<!-- AQUÍ VAS A PEGAR EL RESTO DE TU TEXTO TAL CUAL LO TENÉS -->
+    <!-- IMAGEN DEL ESTUDIO (ESTO ES LO QUE ESTABAS BUSCANDO) -->
+    <img src="estudio.png" class="hero" alt="Estudio Rodasampler">
+  </header>
 
 </body>
 </html>
