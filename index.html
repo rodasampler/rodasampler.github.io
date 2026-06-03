@@ -12,9 +12,31 @@
       background: #0e0e0e;
       color: #f2f2f2;
       line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
     }
 
+    /* DRAGÓN DE FONDO MUY SUAVE */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("dragon.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      opacity: 0.06; /* 👈 ajustá esto: 0.03 a 0.12 aprox */
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* TODO EL CONTENIDO ENCIMA */
     header, section {
+      position: relative;
+      z-index: 1;
       max-width: 800px;
       margin: auto;
       padding: 40px 20px;
@@ -39,15 +61,6 @@
       text-decoration: underline;
     }
 
-    /* HERO IMAGE CONTROLADA (CLAVE) */
-    .hero {
-      width: 100%;
-      max-width: 600px;
-      margin: 20px auto;
-      display: block;
-      border-radius: 8px;
-    }
-
     iframe {
       width: 100%;
       height: 315px;
@@ -62,126 +75,7 @@
   <header>
     <h1>RODASAMPLER</h1>
     <h2>Laboratorio sonoro</h2>
-    <p><em>Ser parte del sonido.</em></p>
-
-    <p>
-      Un espacio abierto donde personas con o sin experiencia musical crean
-      colectivamente paisajes sonoros a través de la voz, la percusión, el cuerpo,
-      la escucha, los instrumentos acústicos y las herramientas electrónicas.
-    </p>
-
-    <!-- IMAGEN HERO CONTROLADA -->
-    <img src="hero.jpg" alt="Rodasampler" class="hero">
   </header>
-
-  <hr>
-
-  <!-- QUE ES -->
-  <section>
-    <h2>¿Qué es Rodasampler?</h2>
-
-    <p>
-      Rodasampler es un laboratorio sonoro y un espacio de encuentro donde la improvisación,
-      la escucha y el juego se convierten en herramientas para la creación colectiva.
-    </p>
-
-    <p>
-      Cada encuentro propone una experiencia de exploración en la que voces, percusiones,
-      instrumentos, palabras y sonidos cotidianos se transforman en paisajes sonoros compartidos.
-    </p>
-
-    <p>
-      A lo largo del proceso, los encuentros también se vuelven taller: un espacio donde aprender,
-      experimentar, descubrir y desarrollar nuevas formas de expresión a través del sonido.
-    </p>
-
-    <p>
-      Más que una actividad musical, Rodasampler es una invitación a escuchar, crear y ser parte del sonido.
-    </p>
-  </section>
-
-  <hr>
-
-  <!-- COMO SON -->
-  <section>
-    <h2>¿Cómo son los encuentros?</h2>
-
-    <p>
-      Escucha, juego e improvisación alrededor de una mesa compartida.
-    </p>
-
-    <p>
-      Instrumentos de distintas culturas, objetos sonoros y herramientas electrónicas.
-    </p>
-
-    <p>
-      Un espacio abierto donde cada persona puede expresarse y aportar su propia voz a una creación colectiva.
-    </p>
-
-    <p>
-      Cada encuentro da origen a un paisaje sonoro único e irrepetible que se integra a un Tapiz de Memorias Sonoras.
-    </p>
-  </section>
-
-  <hr>
-
-  <!-- MEMORIAS -->
-  <section>
-    <h2>Tapiz de Memorias Sonoras</h2>
-
-    <p>
-      Cada encuentro deja una huella.
-    </p>
-
-    <p>
-      Sonidos, imágenes, palabras y experiencias compartidas que continúan resonando más allá de la improvisación.
-    </p>
-
-    <p>
-      Las Memorias Sonoras conforman un archivo vivo en permanente construcción.
-    </p>
-
-    <iframe
-      src="https://www.youtube.com/embed/videoseries?list=PLIcssXW2VeKnyfGQJpoLSjxrsg0Om5piZ"
-      allowfullscreen>
-    </iframe>
-  </section>
-
-  <hr>
-
-  <!-- SOBRE VOS -->
-  <section>
-    <h2>Sobre Javier Escudero</h2>
-
-    <p>
-      Javier Agustín Escudero es músico experimental y artesano sonoro nacido en Salta y radicado en Hurlingham, Buenos Aires.
-    </p>
-
-    <p>
-      Su trabajo explora la improvisación, el live looping, la escucha profunda,
-      el paisaje sonoro y la relación entre tecnologías contemporáneas y músicas de raíz.
-    </p>
-
-    <p>
-      Es creador y coordinador de Rodasampler.
-    </p>
-  </section>
-
-  <hr>
-
-  <!-- CONTACTO -->
-  <section>
-    <h2>Contacto</h2>
-
-    <p>
-      Instagram: <a href="https://instagram.com/rodasampler">@rodasampler</a><br>
-      WhatsApp: <a href="https://wa.me/541165475248">11 6547 5248</a>
-    </p>
-
-    <p>
-      Hurlingham, Buenos Aires, Argentina
-    </p>
-  </section>
 
 </body>
 </html>
