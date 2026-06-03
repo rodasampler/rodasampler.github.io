@@ -12,12 +12,29 @@
       background: #0e0e0e;
       color: #f2f2f2;
       line-height: 1.6;
+      position: relative;
+    }
+
+    /* DRAGÓN DE FONDO (AGREGADO SIN TOCAR TU ESTRUCTURA) */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url("Dragon.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      opacity: 0.06;
+      pointer-events: none;
+      z-index: 0;
     }
 
     header, section {
       max-width: 800px;
       margin: auto;
       padding: 40px 20px;
+      position: relative;
+      z-index: 1;
     }
 
     h1, h2 {
